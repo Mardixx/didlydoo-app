@@ -15,7 +15,25 @@ body main .project {
   align-items: center;
   flex-direction: row;
   justify-content: center;
-  gap: 10rem;
+  gap: 20rem;
+}
+body main .project .grid {
+  display: flex;
+  flex-direction: column;
+}
+body main .project .grid .Availibility {
+  border: 1px solid black;
+}
+body main .project .grid .Dates {
+  border: 1px solid black;
+  display: grid;
+  align-self: baseline;
+  justify-self: center;
+}
+body main .project .grid .Names {
+  border: 1px solid black;
+  display: flex;
+  align-self: baseline;
 }
 
 * {

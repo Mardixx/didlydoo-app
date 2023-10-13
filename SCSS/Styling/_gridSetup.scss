@@ -6,6 +6,7 @@ body {
         justify-content: center;
         flex-direction: column;
         align-items: center;
+
         .project {
             background-color: #F2E1D9;
             width: 90%;
@@ -14,7 +15,34 @@ body {
             align-items: center;
             flex-direction: row;
             justify-content: center;
-            gap: 10rem;
+            gap: 20rem;
+
+
+            .grid {
+                display: flex;
+                flex-direction: column;
+                
+                .Availibility {
+                    border: 1px solid black;
+                }
+    
+                .Dates {
+                    border: 1px solid black;
+                    display: grid;
+                    align-self: baseline;
+                    justify-self: center;
+                }
+    
+                .Names {
+                    border: 1px solid black;
+                    display: flex;
+                    align-self: baseline;
+                    
+                }
+            }
+
+
+
         }
 
     }

@@ -3,7 +3,6 @@ import { addAttendeeFormToCard } from "./_addUser.js";
 export async function getInfo() {
   let data = await fetch("http://localhost:3000/api/events");
   let response = await data.json();
-  /*     console.log(response); */
 
   let section = document.querySelector(".project");
 
@@ -21,29 +20,30 @@ export async function getInfo() {
 
       span.textContent = attendees;
 
+      div.classList = 'grid'
       div.appendChild(span);
     }
     for (let dates of child.dates) {
       console.log(dates);
-
+      
       let span3 = document.createElement("span");
       span3.classList = "Dates";
       span3.textContent = dates.date;
-      div.appendChild(span3);
       span3.style.marginLeft = "10px";
       for (let names of dates.attendees) {
-        let span2 = document.createElement("span");
-        let availibility = names.available;
-        span2.classList = "Availibility";
-        span2.textContent = availibility;
-        div.appendChild(span2);
-        span2.style.marginLeft = "10px";
-        if (availibility == null) {
-          span2.textContent = "Do not know";
+          let span2 = document.createElement("span");
+          let availibility = names.available;
+          span2.classList = "Availibility";
+          span2.textContent = availibility;
+          div.appendChild(span2);
+          span2.style.marginLeft = "10px";
+          if (availibility == null) {
+              span2.textContent = "Do not know";
+            }
         }
-      }
+      div.appendChild(span3);
     }
     section.appendChild(div);
     addAttendeeFormToCard(child, div);
-  }
+}
 }
