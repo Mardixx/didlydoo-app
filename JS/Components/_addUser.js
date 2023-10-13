@@ -22,17 +22,34 @@ export function addAttendeeFormToCard(eventData, project) {
   addAttendeeForm.appendChild(submitAttendeeButton);
   project.appendChild(addAttendeeForm);
 
-  const userAvailability = {
-    name: attendeeNameInput.value,
-    availability: checkbox.value,
-  };
+  // RETRIEVE INPUT DATA WITH SUBMIT
+  addAttendeeForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    const name = attendeeNameInput.value;
+    const availability = [];
+
+    eventData.dates.forEach((date) => {
+      const dateValue = date.date;
+      const checkbox = addAttendeeForm.querySelector(`#${dateValue}`);
+      availability.push({
+        date: dateValue,
+        available: checkbox.checked,
+      });
+    });
+    let userAvailability = {
+      name,
+      dates: availability,
+    };
+    postUserAvailability(userAvailability, eventData.id);
+  });
 }
 
 // POST THE INPUT TO THE JSON //
 let postUserAvailability = () => {
-  fetch("http://localhost:3000/api/events/", {
+  fetch("http://localhost:3000/api/events/${eventID}/attend", {
     method: "POST",
-    body: JSON.stringify(eventData),
+    body: JSON.stringify(userAvailability, eventID),
     headers: {
       "Content-Type": "application/json",
     },
