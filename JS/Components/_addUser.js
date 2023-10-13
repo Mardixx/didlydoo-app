@@ -33,7 +33,7 @@ export function addAttendeeFormToCard(eventData, project) {
       const dateValue = date.date;
       const checkbox = addAttendeeForm.querySelector(`#${dateValue}`);
       availability.push({
-        date: dateValue,
+        date: dateValue, // <- DATE HAS TO BE A STRING !! //
         available: checkbox.checked,
       });
     });
