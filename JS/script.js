@@ -1,3 +1,3 @@
-import { getData } from "./Components/_addUser.js";
+import { getInfo } from "./Components/_fetching.js";
 
-getData();
+getInfo();
