@@ -53,8 +53,6 @@ export async function getInfo() {
         if (availibility == null) {
           span2.textContent = "Do not know";
         }
-        
-
 
         if (i <= 1) {
           onedayDiv.appendChild(span2);
