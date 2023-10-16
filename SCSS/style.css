@@ -14,6 +14,14 @@ body main .project {
   display: flex;
   flex-direction: row;
 }
+body main .project table {
+  display: flex;
+  flex-direction: column;
+}
+body main .project table tr {
+  display: flex;
+  flex-wrap: wrap;
+}
 body main .project #newDate {
   display: none;
 }
