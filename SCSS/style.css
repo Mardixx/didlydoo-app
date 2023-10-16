@@ -87,7 +87,13 @@ body main .project .grid .availibilityDiv {
   width: 90%;
   gap: 1rem;
 }
-body main .project .grid .availibilityDiv .availivilityPerPersonPerDay .Availibility {
+body main .project .grid .availibilityDiv .availibilityPerPersonPerDay {
+  border: 1px solid orange;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+body main .project .grid .availibilityDiv .availibilityPerPersonPerDay .Availibility {
   border: 1px solid black;
 }
 body main .project .grid .dateDiv {

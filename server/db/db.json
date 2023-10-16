@@ -45,32 +45,11 @@
         ]
       },
       {
-        "name": "Albert",
+        "name": "John",
         "dates": [
           {
             "date": "2022-03-17",
-            "available": false
-          },
-          {
-            "date": "2022-03-18",
-            "available": false
-          },
-          {
-            "date": "2022-03-21",
-            "available": false
-          },
-          {
-            "date": "2022-03-22",
-            "available": false
-          }
-        ]
-      },
-      {
-        "name": "Alberto",
-        "dates": [
-          {
-            "date": "2022-03-17",
-            "available": false
+            "available": true
           },
           {
             "date": "2022-03-18",
@@ -78,7 +57,7 @@
           },
           {
             "date": "2022-03-21",
-            "available": true
+            "available": false
           },
           {
             "date": "2022-03-22",
