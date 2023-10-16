@@ -3,7 +3,7 @@ import { addAttendeeFormToCard } from "./_addUser.js";
 export async function getInfo() {
   let data = await fetch("http://localhost:3000/api/events");
   let response = await data.json();
-  /*     console.log(response); */
+  console.log(response);
 
   let section = document.querySelector(".project");
 

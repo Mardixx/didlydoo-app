@@ -40,6 +40,48 @@
             "available": true
           }
         ]
+      },
+      {
+        "name": "Michel",
+        "dates": [
+          {
+            "date": "2022-03-17",
+            "available": true
+          },
+          {
+            "date": "2022-03-18",
+            "available": true
+          },
+          {
+            "date": "2022-03-21",
+            "available": true
+          },
+          {
+            "date": "2022-03-22",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "Jonathan",
+        "dates": [
+          {
+            "date": "2022-03-17",
+            "available": true
+          },
+          {
+            "date": "2022-03-18",
+            "available": true
+          },
+          {
+            "date": "2022-03-21",
+            "available": true
+          },
+          {
+            "date": "2022-03-22",
+            "available": true
+          }
+        ]
       }
     ],
     "created_at": "2021-11-15T00:00",
@@ -90,6 +132,31 @@
           {
             "date": "2022-03-12",
             "available": false
+          }
+        ]
+      },
+      {
+        "name": "Alberto ",
+        "dates": [
+          {
+            "date": "2022-01-10",
+            "available": false
+          },
+          {
+            "date": "2022-02-10",
+            "available": true
+          },
+          {
+            "date": "2022-03-10",
+            "available": true
+          },
+          {
+            "date": "2022-03-11",
+            "available": true
+          },
+          {
+            "date": "2022-03-12",
+            "available": true
           }
         ]
       }

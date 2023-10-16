@@ -31,7 +31,7 @@ export function addAttendeeFormToCard(eventData, project) {
 
     eventData.dates.forEach((date) => {
       const dateValue = date.date;
-      const checkbox = addAttendeeForm.querySelector(`#${dateValue}`);
+      const checkbox = document.getElementById(dateValue);
       availability.push({
         date: dateValue, // <- DATE HAS TO BE A STRING !! //
         available: checkbox.checked,
@@ -41,20 +41,16 @@ export function addAttendeeFormToCard(eventData, project) {
       name,
       dates: availability,
     };
-    postUserAvailability(userAvailability, eventData.id);
+    let eventID = eventData.id;
+    fetch(`http://localhost:3000/api/events/${eventID}/attend`, {
+      method: "POST",
+      body: JSON.stringify(userAvailability, eventID),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((error) => console.error(error));
   });
 }
-
-// POST THE INPUT TO THE JSON //
-let postUserAvailability = () => {
-  fetch("http://localhost:3000/api/events/${eventID}/attend", {
-    method: "POST",
-    body: JSON.stringify(userAvailability, eventID),
-    headers: {
-      "Content-Type": "application/json",
-    },
-  })
-    .then((response) => response.json())
-    .then((data) => console.log(data))
-    .catch((error) => console.error(error));
-};
