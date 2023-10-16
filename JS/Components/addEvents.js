@@ -48,9 +48,20 @@ const nameInput = document.getElementById('name');
 const authorInput = document.getElementById('author');
 const descriptionInput = document.getElementById('description');
 const addButton = document.getElementById('add-button');
+const errorMessage = document.getElementById('error-message');
 
 addButton.addEventListener('click', (event) => {
 event.preventDefault();
+if (authorInput.value === '') {
+    errorMessage.textContent = 'Please enter an author.';
+  } else if (datesArray === '') {
+    errorMessage.textContent = 'Please choose a date.';
+ }  else if (datesArray.length > 2){
+    errorMessage.textContent = 'Please choose only two date.';
+}  else if (descriptionInput.value === '') {
+    errorMessage.textContent = 'please fill the descripton field.';     
+ }
+   else {
 const eventData = {
     name: nameInput.value,
     // the datesArray is in string format not date format
@@ -58,6 +69,7 @@ const eventData = {
     author: authorInput.value,
     description: descriptionInput.value
 };
+
 
 fetch('http://localhost:3000/api/events/', {
     method: 'POST',
@@ -70,5 +82,8 @@ fetch('http://localhost:3000/api/events/', {
 .then(data => console.log(data))
 .catch(error => console.error(error));
 console.log(eventData);
+   }
 });
 }
+
+

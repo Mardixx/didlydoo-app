@@ -44,7 +44,11 @@ body {
                     margin: 2rem 0 2rem 0;
                     width: 90%;
                     gap: 1rem;
-                    .availivilityPerPersonPerDay {
+                    .availibilityPerPersonPerDay {
+                        border: 1px solid orange;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
                         .Availibility {
                             border: 1px solid black;
                         }
