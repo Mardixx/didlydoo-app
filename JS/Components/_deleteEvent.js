@@ -9,10 +9,10 @@ export async function deleteEvent(event) {
     })
       .then((reponse) => {
         if (reponse.status === 200) {
-          console.log("Delete successfull");
+          console.log("Deleted successfully");
           event.target.parentElement.remove();
         } else {
-          console.error("Deletion failed");
+          console.error("Deletion failed!");
         }
       })
       .catch((error) => {
