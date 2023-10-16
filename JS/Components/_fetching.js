@@ -1,16 +1,15 @@
 import { addAttendeeFormToCard } from "./_addUser.js";
+import { deleteEvent } from "./_deleteEvent.js";
 
 export async function getInfo() {
   let data = await fetch("http://localhost:3000/api/events");
   let response = await data.json();
   let section = document.querySelector(".project");
   for (let child of response) {
-
-    let delBtn = document.createElement('button')
-    let addBtn = document.createElement('button')
-    let modBtn = document.createElement('button')
-
-    
+    let delBtn = document.createElement("button");
+    delBtn.setAttribute("data-event-id", child.id);
+    let addBtn = document.createElement("button");
+    let modBtn = document.createElement("button");
 
     /* let availibilityDiv = document.createElement("div");
     let dateDiv = document.createElement("div");
@@ -27,33 +26,32 @@ export async function getInfo() {
     /* h1Div.appendChild(h1);
     gridDiv.appendChild(h1Div); */
 
+    let table = document.createElement("table");
+    let tr = document.createElement("tr");
+    let tr2 = document.createElement("tr");
+    let tr3 = document.createElement("tr");
+    let th = document.createElement("th");
 
-    let table = document.createElement('table')
-    let tr = document.createElement('tr')
-    let tr2 = document.createElement('tr')
-    let tr3 = document.createElement('tr')
-    let th = document.createElement('th')
+    th.textContent = child.name;
 
-    th.textContent = child.name
-
-    table.appendChild(th)
-    table.appendChild(modBtn)
-    table.appendChild(addBtn)
-    table.appendChild(delBtn)
-    table.appendChild(tr)
+    table.appendChild(th);
+    table.appendChild(modBtn);
+    table.appendChild(addBtn);
+    table.appendChild(delBtn);
+    table.appendChild(tr);
 
     console.log(child.name);
-    section.appendChild(table)
-    
-    for (let objects of child.dates[0].attendees) {
-      let td = document.createElement('td')
+    section.appendChild(table);
 
-      td.textContent = objects.name
+    for (let objects of child.dates[0].attendees) {
+      let td = document.createElement("td");
+
+      td.textContent = objects.name;
 
       console.log(objects);
 
-      tr3.appendChild(td)
-      table.appendChild(tr3)
+      tr3.appendChild(td);
+      table.appendChild(tr3);
 
       /* let attendees = objects.name;
       let span = document.createElement("span");
@@ -68,61 +66,56 @@ export async function getInfo() {
       gridDiv.appendChild(nameDiv); */
     }
     for (let dates of child.dates) {
-      let td = document.createElement('td')
+      let td = document.createElement("td");
 
-      td.textContent = dates.date
+      td.textContent = dates.date;
 
-      table.appendChild(tr)
+      table.appendChild(tr);
 
-      tr.appendChild(td)
-
+      tr.appendChild(td);
 
       /* let span3 = document.createElement("span"); */
-      
+
       /* span3.classList = "Dates"; */
-      
+
       /* span3.textContent = dates.date; */
-      
+
       /* span3.style.marginLeft = "10px"; */
-      
+
       /* let i = 0; */
-      
+
       /* let onedayDiv = document.createElement("div");
       onedayDiv.classList = "availibilityPerPersonPerDay"; */
-      
+
       for (let names of dates.attendees) {
-
-
-        let td = document.createElement('td')
+        let td = document.createElement("td");
 
         if (names.available == null) {
           td.textContent = "Do not know";
         } else {
-          td.textContent = names.available
+          td.textContent = names.available;
         }
 
+        table.appendChild(tr2);
 
-
-        table.appendChild(tr2)
-
-        tr2.appendChild(td)
+        tr2.appendChild(td);
         /* console.log(names); */
         /* let span2 = document.createElement("span");
         let availibility = names.available; */
-        
+
         /* span2.classList = "Availibility";
         availibilityDiv.classList = "availibilityDiv";
         dateDiv.classList = "dateDiv"; */
-        
+
         /* span2.textContent = availibility; */
-        
+
         /* dateDiv.appendChild(span3);
         gridDiv.appendChild(dateDiv); */
-/*         availibilityDiv.appendChild(span2); */
+        /*         availibilityDiv.appendChild(span2); */
         /* gridDiv.appendChild(availibilityDiv); */
-        
+
         /* span2.style.marginLeft = "10px"; */
-        
+
         /* if (availibility == null) {
           span2.textContent = "Do not know";
         } */
