@@ -16,6 +16,13 @@ body {
   transform: translateX(15vw) translateY(-2vw);
 }
 
+.nameForm input[type=checkbox] {
+  height: 20px;
+  width: 20px;
+  fill: green;
+  accent-color: green;
+}
+
 header {
   display: flex;
   flex-direction: column;

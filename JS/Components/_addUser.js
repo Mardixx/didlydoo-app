@@ -2,6 +2,7 @@ export const project = document.getElementById("project");
 
 export function addAttendeeFormToCard(eventData, project) {
   const addAttendeeForm = document.createElement("form");
+  addAttendeeForm.classList.add("nameForm");
   const attendeeNameInput = document.createElement("input");
   const submitAttendeeButton = document.createElement("button");
 
