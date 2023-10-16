@@ -14,11 +14,50 @@ export function addAttendeeFormToCard(eventData, project) {
     checkbox.type = "checkbox";
     checkbox.id = dateValue;
     checkbox.name = "dateAvailability";
-    checkbox.checked = false;
+    checkbox.checked = false; // <- This is the default value //
 
     addAttendeeForm.appendChild(checkbox);
   });
   addAttendeeForm.appendChild(attendeeNameInput);
   addAttendeeForm.appendChild(submitAttendeeButton);
   project.appendChild(addAttendeeForm);
+  const error = document.createElement("span");
+  error.setAttribute("id", "error");
+  addAttendeeForm.appendChild(error);
+
+  // RETRIEVE INPUT DATA WITH SUBMIT
+  addAttendeeForm.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const name = attendeeNameInput.value;
+
+    if (name.length <= 2 || name.length >= 15) {
+      error.textContent = "Enter a valid name please";
+      return;
+    }
+    const availability = [];
+
+    eventData.dates.forEach((date) => {
+      const dateValue = date.date;
+      const checkbox = document.getElementById(dateValue);
+      availability.push({
+        date: dateValue, // <- DATE HAS TO BE A STRING !! //
+        available: checkbox.checked,
+      });
+    });
+    let userAvailability = {
+      name,
+      dates: availability,
+    };
+    let eventID = eventData.id;
+    fetch(`http://localhost:3000/api/events/${eventID}/attend`, {
+      method: "POST",
+      body: JSON.stringify(userAvailability, eventID),
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => console.log(data))
+      .catch((error) => console.error(error));
+  });
 }
