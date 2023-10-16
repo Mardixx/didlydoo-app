@@ -32,7 +32,7 @@ export function addAttendeeFormToCard(eventData, project) {
     const name = attendeeNameInput.value;
 
     if (name.length <= 2 || name.length >= 15) {
-      error.textContent = "Wrong name!";
+      error.textContent = "Wrong name";
       return;
     }
     const availability = [];
