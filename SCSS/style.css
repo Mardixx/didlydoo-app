@@ -1,18 +1,157 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 @import url("https://fonts.googleapis.com/css2?family=Lily+Script+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
 body {
   font-family: "Poppins";
 }
 
 .main-title {
   font-family: "Lily Script One";
-  margin: 2rem 0 0 0;
+  margin: 2vw 0;
   font-size: calc(64px + 16 * (100vw - 568px) / 200);
   color: white;
 }
 
 .main-subtitle {
   color: white;
-  font-size: 1rem;
+  font-size: 0.9rem;
   transform: translateX(15vw) translateY(-2vw);
 }
 
@@ -29,10 +168,35 @@ body {
 }
 .nameForm input[type=checkbox] {
   width: 30px;
+  border-radius: 50%;
   outline: none;
   border-radius: 8px;
-  fill: green;
-  accent-color: green;
+  cursor: pointer;
+  accent-color: #2a9d8f;
+}
+.nameForm button {
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  height: 30px;
+  width: 50px;
+  background-color: #f4a261;
+  color: white;
+  margin-left: 6px;
+  transition: transform 180ms ease-in-out;
+  display: block;
+}
+.nameForm button:hover {
+  background-color: #2a9d8f;
+  transform: scale(110%);
+}
+.nameForm #error {
+  color: #e76f51;
+  font-weight: 600;
+  margin: 1rem;
+  font-size: 0.6em;
+  clear: both;
+  display: block;
 }
 
 header {
@@ -124,8 +288,4 @@ body main .project .grid .nameDiv .Names {
   border: 1px solid black;
   display: flex;
   align-self: baseline;
-}
-
-* {
-  margin: 0;
 }/*# sourceMappingURL=style.css.map */

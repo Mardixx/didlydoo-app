@@ -10,9 +10,34 @@
   }
   input[type="checkbox"] {
     width: 30px;
+    border-radius: 50%;
     outline: none;
     border-radius: 8px;
-    fill: green;
-    accent-color: green;
+    cursor: pointer;
+    accent-color: $green;
+  }
+  button {
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    height: 30px;
+    width: 50px;
+    background-color: $highlight;
+    color: white;
+    margin-left: 6px;
+    transition: transform 180ms ease-in-out;
+    display: block;
+    &:hover {
+      background-color: $green;
+      transform: scale(110%);
+    }
+  }
+  #error {
+    color: $orangeRed;
+    font-weight: 600;
+    margin: 1rem;
+    font-size: 0.6em;
+    clear: both;
+    display: block;
   }
 }
