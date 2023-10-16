@@ -1,49 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./SCSS/style.css" />
-    <script defer type="module" src="./JS/script.js"></script>
-    <script
-      defer
-      type="module"
-      src="./JS/Components/_buttonNewdate.js"
-    ></script>
-    <title>DidlyDoo</title>
-  </head>
-  <body>
-    <header>
-      <h1>DidlyDoo</h1>
-      <span>event planner</span>
-    </header>
-    <main>
-      <form class="inputs-new">
-        <input id="name" type="text" placeholder="Project name" />
-        <input id="date" type="date" placeholder="Date" />
-        <input
-          id="dateNew-button"
-          type="submit"
-          placeholder="Add a new date"
-          value="add a New date!"
-        />
-        <input id="author" type="text" placeholder="Author" />
-        <input id="description" type="text" placeholder="Description" />
-        <input id="add-button" type="submit" value="let rock the party!" />
-        <ul id="dates-list"></ul>
-      </form>
-      <section class="project">
-        <!-- Eli -->
-        <form class="proposerDate">
-          <input type="date" id="newDate" value="" />
-          <input type="text" id="eventID" value="" />
-          <input type="submit" id="proposerDate" value="Proposer date" />
-        </form>
-        <!-- Eli -->
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./SCSS/style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <script defer type="module" src="./JS/script.js"></script>
+        <script
+        defer
+        type="module"
+        src="./JS/Components/_buttonNewdate.js"
+        ></script>
+        <title>DidlyDoo</title>
+    </head>
+    <body>
+        <header>
+            <h1>DidlyDoo</h1>
+            <span>event planner</span>
+        </header>
+        <main>
+            <form class="inputs-new">
+                <input id="name" type="text" placeholder="Project name" />
+                <input id="date" type="date" placeholder="Date" />
+                <input
+                    class="btnNewDate"
+                    id="dateNew-button"
+                    type="submit"
+                    placeholder="Add New Date"
+                    value="Add New Date!"
+                />
+                <input id="author" type="text" placeholder="Author" />
+                <input id="description" type="text" placeholder="Description" />
+                <input class="btnAdd" id="add-button" type="submit" value="Let Rock the Party!" />
+                <ul id="dates-list"></ul>
+            </form>
+            <section class="project">
+                <!-- Eli -->
+                <form class="proposerDate">
+                    <input type="date" id="newDate" value="" />
+                    <input type="text" id="eventID" value="" />
+                    <input type="submit" id="proposerDate" value="Proposer date" />
+                </form>
+                <!-- Eli -->
 
-        <ul id="events-list"></ul>
-      </section>
-    </main>
-    <footer></footer>
-  </body>
+                <ul id="events-list"></ul>
+            </section>
+        </main>
+        <footer></footer>
+    </body>
 </html>

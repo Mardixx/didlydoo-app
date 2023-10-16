@@ -1,3 +1,43 @@
+* {
+  margin: 0;
+}
+
+.btnNewDate {
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: #ffffff;
+  width: 170px;
+  color: #000000;
+  font-weight: 600;
+  box-shadow: 5px 2px 20px black;
+}
+.btnNewDate:hover {
+  background-color: #000000;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.btnAdd {
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: #F4A261;
+  width: 170px;
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 5px 2px 20px black;
+}
+.btnAdd:hover {
+  background-color: #ffffff;
+  color: #F4A261;
+  box-shadow: none;
+}
+
 body {
   background-color: #036855;
 }
@@ -74,8 +114,4 @@ body main .project .grid .nameDiv .Names {
   border: 1px solid black;
   display: flex;
   align-self: baseline;
-}
-
-* {
-  margin: 0;
 }/*# sourceMappingURL=style.css.map */
