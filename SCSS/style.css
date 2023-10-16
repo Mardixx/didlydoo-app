@@ -155,6 +155,42 @@ body {
   transform: translateX(15vw) translateY(-2vw);
 }
 
+.btnNewDate {
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: #ffffff;
+  width: 170px;
+  color: #000000;
+  font-weight: 600;
+  box-shadow: 5px 2px 20px black;
+}
+.btnNewDate:hover {
+  background-color: #000000;
+  color: #ffffff;
+  box-shadow: none;
+}
+
+.btnAdd {
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: #F4A261;
+  width: 170px;
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 5px 2px 20px black;
+}
+.btnAdd:hover {
+  background-color: #ffffff;
+  color: #F4A261;
+  box-shadow: none;
+}
+
 .nameForm {
   display: flex;
   align-items: center;
@@ -220,6 +256,14 @@ body main .project {
   border-radius: 10px;
   display: flex;
   flex-direction: row;
+}
+body main .project table {
+  display: flex;
+  flex-direction: column;
+}
+body main .project table tr {
+  display: flex;
+  flex-wrap: wrap;
 }
 body main .project #newDate {
   display: none;
