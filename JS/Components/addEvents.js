@@ -19,7 +19,21 @@ const dateDeleteButton = document.createElement('button');
 dateItem.textContent = dateString;
 datesList.appendChild(dateItem);
 dateItem.appendChild(dateDeleteButton);
+// the delete button is created and appended to the dateItem
+// the delete button is given an id and text content
+// the event listener removes the dateItem from the dom
+// the event listener removes the date from the array
 dateDeleteButton.setAttribute('id', 'dateDeleteButton');
+dateDeleteButton.textContent = 'Delete';
+dateDeleteButton.addEventListener('click', (event) => {
+    event.preventDefault();
+    dateItem.remove();
+    const index = datesArray.indexOf(dateString);
+    if (index > -1) {
+        datesArray.splice(index, 1);
+    }
+    console.log(datesArray);
+});
 });
 
 
@@ -39,6 +53,7 @@ addButton.addEventListener('click', (event) => {
 event.preventDefault();
 const eventData = {
     name: nameInput.value,
+    // the datesArray is in string format not date format
     dates: datesArray,
     author: authorInput.value,
     description: descriptionInput.value
