@@ -4,12 +4,7 @@
     "name": "My sweet 16",
     "description": "I am going to be 16, let us all party together! Help me pick a date so we can go together",
     "author": "John Doe",
-    "dates": [
-      "2022-03-17",
-      "2022-03-18",
-      "2022-03-21",
-      "2022-03-22"
-    ],
+    "dates": ["2022-03-17", "2022-03-18", "2022-03-21", "2022-03-22"],
     "attendees": [
       {
         "name": "Michou",
@@ -42,44 +37,23 @@
         ]
       },
       {
-        "name": "Michel",
+        "name": "Albert",
         "dates": [
           {
             "date": "2022-03-17",
-            "available": true
+            "available": false
           },
           {
             "date": "2022-03-18",
-            "available": true
+            "available": false
           },
           {
             "date": "2022-03-21",
-            "available": true
+            "available": false
           },
           {
             "date": "2022-03-22",
-            "available": true
-          }
-        ]
-      },
-      {
-        "name": "Jonathan",
-        "dates": [
-          {
-            "date": "2022-03-17",
-            "available": true
-          },
-          {
-            "date": "2022-03-18",
-            "available": true
-          },
-          {
-            "date": "2022-03-21",
-            "available": true
-          },
-          {
-            "date": "2022-03-22",
-            "available": true
+            "available": false
           }
         ]
       }

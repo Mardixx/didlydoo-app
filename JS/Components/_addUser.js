@@ -21,12 +21,19 @@ export function addAttendeeFormToCard(eventData, project) {
   addAttendeeForm.appendChild(attendeeNameInput);
   addAttendeeForm.appendChild(submitAttendeeButton);
   project.appendChild(addAttendeeForm);
+  const error = document.createElement("span");
+  error.setAttribute("id", "error");
+  addAttendeeForm.appendChild(error);
 
   // RETRIEVE INPUT DATA WITH SUBMIT
   addAttendeeForm.addEventListener("submit", async (e) => {
     e.preventDefault();
-
     const name = attendeeNameInput.value;
+
+    if (name.length <= 2 || name.length >= 15) {
+      error.textContent = "Enter a valid name please";
+      return;
+    }
     const availability = [];
 
     eventData.dates.forEach((date) => {
