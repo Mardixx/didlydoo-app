@@ -38,7 +38,7 @@ export async function getInfo() {
       td.textContent = attendees.name;
 
       divNames.appendChild(td);
-      bigDiv.appendChild(divNames);
+      table.appendChild(divNames);
       console.log(attendees);
     }
 
@@ -49,18 +49,16 @@ export async function getInfo() {
     section.appendChild(bigDiv);
 
     for (let dates of child.dates) {
-      let td = document.createElement("td");
+      let tdDate = document.createElement("td");
 
-      td.classList = "dates";
-      td.textContent = dates.date;
-
-      trDates.appendChild(td);
+      tdDate.classList = "dates";
+      tdDate.textContent = dates.date;
 
       let tr = document.createElement("tr");
-
+      tr.appendChild(tdDate);
       for (let names of dates.attendees) {
         let td = document.createElement("td");
-
+        
         let img = document.createElement('img')
         switch (names.available) {
           case true:
@@ -80,6 +78,7 @@ export async function getInfo() {
             td.textContent = '?'
             break;
         }
+
         tr.appendChild(td);
         table.appendChild(tr);
       }
