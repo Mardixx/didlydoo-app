@@ -3,16 +3,19 @@
   transition: all 0.3 ease-in-out;
   align-items: center;
   flex-wrap: wrap;
-  margin-left: 1rem;
+  margin-left: 2rem;
   width: 100%;
   input {
     height: 30px;
     border-radius: 8px;
     border: none;
+    &:focus {
+      outline-color: $highlight;
+    }
   }
   input[type="checkbox"] {
     width: 30px;
-    margin-right: 24px;
+    margin-right: 26px;
     border-radius: 50%;
     outline: none;
     border-radius: 8px;

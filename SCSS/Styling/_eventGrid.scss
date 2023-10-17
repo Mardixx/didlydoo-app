@@ -10,17 +10,13 @@ main {
   margin: 0 2rem;
 }
 
-h1 {
-  font-family: $titleFont;
-  font-size: 1.7rem;
-}
-
 #app {
   background-color: #f2e1d9;
   width: 100%;
   border-radius: 10px;
   .bigDiv {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     margin: 1rem 0;
     width: 100%;
@@ -36,42 +32,6 @@ h1 {
       span {
         margin-bottom: 1.5rem;
         font-size: 0.9rem;
-      }
-    }
-    .event-btn {
-      border-radius: 8px;
-      border: none;
-      width: 20px;
-      color: white;
-      height: 20px;
-      margin-right: 2px;
-      font-weight: bold;
-      &--delete {
-        background-color: $orangeRed;
-        &::before {
-          content: "x";
-        }
-        &:hover {
-          background-color: rgb(157, 0, 0);
-        }
-      }
-      &--addDate {
-        background-color: $green;
-        &::before {
-          content: "+";
-        }
-      }
-      &--modAttend {
-        background-color: $highlight;
-        &::before {
-          content: "a";
-        }
-      }
-      &--modEvent {
-        background-color: $highlight;
-        &::before {
-          content: "m";
-        }
       }
     }
 

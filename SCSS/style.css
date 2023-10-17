@@ -150,46 +150,17 @@ body {
   text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
+h2 {
+  font-family: "Lily Script One";
+  font-size: 2rem;
+}
+
 .main-subtitle {
   color: white;
   font-size: 0.9rem;
   transform: translateX(15vw) translateY(-2vw);
 }
 
-/* .btnNewDate {
-  padding: 15px;
-  font-size: 16px;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
-  background: #ffffff;
-  width: 170px;
-  color: #000000;
-  font-weight: 600;
-  box-shadow: 5px 2px 20px black;
-  &:hover {
-    background-color: #000000;
-    color: #ffffff;
-    box-shadow: none;
-  }
-}
-.btnAdd {
-  padding: 15px;
-  font-size: 16px;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
-  background: #f4a261;
-  width: 170px;
-  color: #ffffff;
-  font-weight: 600;
-  box-shadow: 5px 2px 20px black;
-  &:hover {
-    background-color: #ffffff;
-    color: $highlight;
-    box-shadow: none;
-  }
-} */
 #dateNew-button {
   cursor: pointer;
   background-color: #f4a261;
@@ -214,51 +185,41 @@ body {
   transform: scale(103%);
 }
 
-.nameForm {
-  display: flex;
-  transition: all 0.3 ease-in-out;
-  align-items: center;
-  flex-wrap: wrap;
-  margin-left: 1rem;
-  width: 100%;
-}
-.nameForm input {
-  height: 30px;
+.event-btn {
   border-radius: 8px;
   border: none;
-}
-.nameForm input[type=checkbox] {
-  width: 30px;
-  margin-right: 24px;
-  border-radius: 50%;
-  outline: none;
-  border-radius: 8px;
-  cursor: pointer;
-  accent-color: #2a9d8f;
-}
-.nameForm button {
-  border: none;
-  border-radius: 8px;
-  font-weight: 600;
-  height: 30px;
-  width: 50px;
-  margin-left: -12px;
-  background-color: #f4a261;
+  width: 20px;
   color: white;
-  transition: transform 180ms ease-in-out;
-  display: block;
+  height: 20px;
+  margin-right: 2px;
+  font-weight: bold;
 }
-.nameForm button:hover {
+.event-btn--delete {
+  background-color: #e76f51;
+}
+.event-btn--delete::before {
+  content: "x";
+}
+.event-btn--delete:hover {
+  background-color: rgb(157, 0, 0);
+}
+.event-btn--addDate {
   background-color: #2a9d8f;
-  transform: scale(110%);
 }
-.nameForm #error {
-  color: #e76f51;
-  font-weight: 600;
-  margin: 1rem;
-  font-size: 0.6em;
-  clear: both;
-  display: block;
+.event-btn--addDate::before {
+  content: "+";
+}
+.event-btn--modAttend {
+  background-color: #f4a261;
+}
+.event-btn--modAttend::before {
+  content: "a";
+}
+.event-btn--modEvent {
+  background-color: #f4a261;
+}
+.event-btn--modEvent::before {
+  content: "m";
 }
 
 .inputs-new {
@@ -324,6 +285,56 @@ body {
   color: red;
 }
 
+.nameForm {
+  display: flex;
+  transition: all 0.3 ease-in-out;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 2rem;
+  width: 100%;
+}
+.nameForm input {
+  height: 30px;
+  border-radius: 8px;
+  border: none;
+}
+.nameForm input:focus {
+  outline-color: #f4a261;
+}
+.nameForm input[type=checkbox] {
+  width: 30px;
+  margin-right: 26px;
+  border-radius: 50%;
+  outline: none;
+  border-radius: 8px;
+  cursor: pointer;
+  accent-color: #2a9d8f;
+}
+.nameForm button {
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  height: 30px;
+  width: 50px;
+  margin-left: -12px;
+  background-color: #f4a261;
+  color: white;
+  transition: transform 180ms ease-in-out;
+  display: block;
+}
+.nameForm button:hover {
+  background-color: #2a9d8f;
+  transform: scale(110%);
+}
+.nameForm #error {
+  color: #e76f51;
+  font-weight: 600;
+  margin: 1rem;
+  font-size: 0.6em;
+  clear: both;
+  display: block;
+}
+
 header {
   display: flex;
   flex-direction: column;
@@ -342,11 +353,6 @@ main {
   margin: 0 2rem;
 }
 
-h1 {
-  font-family: "Lily Script One";
-  font-size: 1.7rem;
-}
-
 #app {
   background-color: #f2e1d9;
   width: 100%;
@@ -354,6 +360,7 @@ h1 {
 }
 #app .bigDiv {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   margin: 1rem 0;
   width: 100%;
@@ -371,42 +378,6 @@ h1 {
 #app .bigDiv div span {
   margin-bottom: 1.5rem;
   font-size: 0.9rem;
-}
-#app .bigDiv .event-btn {
-  border-radius: 8px;
-  border: none;
-  width: 20px;
-  color: white;
-  height: 20px;
-  margin-right: 2px;
-  font-weight: bold;
-}
-#app .bigDiv .event-btn--delete {
-  background-color: #e76f51;
-}
-#app .bigDiv .event-btn--delete::before {
-  content: "x";
-}
-#app .bigDiv .event-btn--delete:hover {
-  background-color: rgb(157, 0, 0);
-}
-#app .bigDiv .event-btn--addDate {
-  background-color: #2a9d8f;
-}
-#app .bigDiv .event-btn--addDate::before {
-  content: "+";
-}
-#app .bigDiv .event-btn--modAttend {
-  background-color: #f4a261;
-}
-#app .bigDiv .event-btn--modAttend::before {
-  content: "a";
-}
-#app .bigDiv .event-btn--modEvent {
-  background-color: #f4a261;
-}
-#app .bigDiv .event-btn--modEvent::before {
-  content: "m";
 }
 #app .bigDiv .dates {
   display: flex;

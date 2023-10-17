@@ -12,6 +12,11 @@ body {
   text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
+h2 {
+  font-family: $titleFont;
+  font-size: 2rem;
+}
+
 .main-subtitle {
   color: white;
   font-size: clamp(0.6rem, 0.9rem, 1.5rem);

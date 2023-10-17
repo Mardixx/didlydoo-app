@@ -1,38 +1,3 @@
-/* .btnNewDate {
-  padding: 15px;
-  font-size: 16px;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
-  background: #ffffff;
-  width: 170px;
-  color: #000000;
-  font-weight: 600;
-  box-shadow: 5px 2px 20px black;
-  &:hover {
-    background-color: #000000;
-    color: #ffffff;
-    box-shadow: none;
-  }
-}
-.btnAdd {
-  padding: 15px;
-  font-size: 16px;
-  border-radius: 20px;
-  border: none;
-  cursor: pointer;
-  background: #f4a261;
-  width: 170px;
-  color: #ffffff;
-  font-weight: 600;
-  box-shadow: 5px 2px 20px black;
-  &:hover {
-    background-color: #ffffff;
-    color: $highlight;
-    box-shadow: none;
-  }
-} */
-
 #dateNew-button {
   cursor: pointer;
   background-color: $highlight;
@@ -54,5 +19,42 @@
   &:hover {
     background-color: green;
     transform: scale(103%);
+  }
+}
+
+.event-btn {
+  border-radius: 8px;
+  border: none;
+  width: 20px;
+  color: white;
+  height: 20px;
+  margin-right: 2px;
+  font-weight: bold;
+  &--delete {
+    background-color: $orangeRed;
+    &::before {
+      content: "x";
+    }
+    &:hover {
+      background-color: rgb(157, 0, 0);
+    }
+  }
+  &--addDate {
+    background-color: $green;
+    &::before {
+      content: "+";
+    }
+  }
+  &--modAttend {
+    background-color: $highlight;
+    &::before {
+      content: "a";
+    }
+  }
+  &--modEvent {
+    background-color: $highlight;
+    &::before {
+      content: "m";
+    }
   }
 }

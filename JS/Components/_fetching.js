@@ -8,7 +8,7 @@ export async function getInfo() {
   let response = await data.json();
   let section = document.getElementById("app");
   for (let child of response) {
-    let h1 = document.createElement("h1");
+    let h2 = document.createElement("h2");
     let table = document.createElement("table");
     let div = document.createElement("div");
     let bigDiv = document.createElement("div");
@@ -18,7 +18,7 @@ export async function getInfo() {
 
     bigDiv.classList = "bigDiv";
 
-    h1.textContent = child.name;
+    h2.textContent = child.name;
 
     let delBtn = document.createElement("button");
     delBtn.setAttribute("data-event-id", child.id);
@@ -55,7 +55,7 @@ export async function getInfo() {
       console.log(attendees);
     }
 
-    div.appendChild(h1);
+    div.appendChild(h2);
     div.appendChild(description);
     div.appendChild(table);
     bigDiv.appendChild(div);
