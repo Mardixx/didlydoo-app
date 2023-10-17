@@ -1,13 +1,5 @@
-async function getData() {
-  fetch("http://localhost:3000/api/events/")
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-    })
-    .catch((error) => console.error(error));
-}
-
-getData();
+export async function addDate(event) {
+  const eventID = event.target.getAttribute("data-event-id");
 
 document.addEventListener("DOMContentLoaded", () => {
   proposerDate.addEventListener("click", () => {
@@ -25,3 +17,4 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 // newDateProposition();
+}
