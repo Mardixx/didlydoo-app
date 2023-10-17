@@ -295,6 +295,33 @@ body {
   }
 }
 
+#dates-list {
+  margin: 1rem 0;
+}
+#dates-list li {
+  color: white;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#dates-list li button {
+  font-size: 1rem;
+  text-transform: uppercase;
+  vertical-align: auto;
+  font-weight: bold;
+  color: #e76f51;
+  border: none;
+  border-radius: 8px;
+  background: none;
+  transition: all 0.3s linear;
+}
+#dates-list li button:hover {
+  transform: rotate(180deg);
+  margin-left: 4px;
+  color: red;
+}
+
 header {
   display: flex;
   flex-direction: column;

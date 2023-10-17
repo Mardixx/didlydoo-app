@@ -33,3 +33,30 @@
     }
   }
 }
+
+#dates-list {
+  margin: 1rem 0;
+  li {
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button {
+      font-size: 1rem;
+      text-transform: uppercase;
+      vertical-align: auto;
+      font-weight: bold;
+      color: $orangeRed;
+      border: none;
+      border-radius: 8px;
+      background: none;
+      transition: all 0.3s linear;
+      &:hover {
+        transform: rotate(180deg);
+        margin-left: 4px;
+        color: red;
+      }
+    }
+  }
+}
