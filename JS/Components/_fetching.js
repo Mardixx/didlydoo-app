@@ -1,4 +1,5 @@
 import { addAttendeeFormToCard } from "./_addUser.js";
+import { deleteEvent } from "./_deleteEvent.js";
 
 export async function getInfo() {
   let data = await fetch("http://localhost:3000/api/events");
@@ -16,6 +17,14 @@ export async function getInfo() {
     trDates.classList = 'dateRow'
     
     h1.textContent = child.name
+
+    let delBtn = document.createElement("button");
+    delBtn.setAttribute("data-event-id", child.id);
+    let addBtn = document.createElement("button");
+    let modBtn = document.createElement("button");
+    table.appendChild(modBtn);
+    table.appendChild(addBtn);
+    table.appendChild(delBtn);
 
     let divNames = document.createElement('tr')
 
@@ -41,10 +50,10 @@ export async function getInfo() {
     
     
     for (let dates of child.dates) {
-      let td = document.createElement('td')
+      let td = document.createElement("td");
 
       td.classList = 'dates'
-      td.textContent = dates.date
+      td.textContent = dates.date;
 
       trDates.appendChild(td)
 

@@ -2,11 +2,13 @@ export const project = document.getElementById("project");
 
 export function addAttendeeFormToCard(eventData, project) {
   const addAttendeeForm = document.createElement("form");
+  addAttendeeForm.classList.add("nameForm");
   const attendeeNameInput = document.createElement("input");
   const submitAttendeeButton = document.createElement("button");
 
   attendeeNameInput.placeholder = "Enter your name";
-  submitAttendeeButton.textContent = "Add Attendee";
+  submitAttendeeButton.textContent = "Send";
+  addAttendeeForm.appendChild(attendeeNameInput);
 
   eventData.dates.forEach((date) => {
     const dateValue = date.date;
@@ -18,7 +20,6 @@ export function addAttendeeFormToCard(eventData, project) {
 
     addAttendeeForm.appendChild(checkbox);
   });
-  addAttendeeForm.appendChild(attendeeNameInput);
   addAttendeeForm.appendChild(submitAttendeeButton);
   project.appendChild(addAttendeeForm);
   const error = document.createElement("span");
@@ -31,7 +32,7 @@ export function addAttendeeFormToCard(eventData, project) {
     const name = attendeeNameInput.value;
 
     if (name.length <= 2 || name.length >= 15) {
-      error.textContent = "Enter a valid name please";
+      error.textContent = "Wrong name!";
       return;
     }
     const availability = [];
