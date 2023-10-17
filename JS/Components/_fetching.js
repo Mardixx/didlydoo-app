@@ -11,6 +11,9 @@ export async function getInfo() {
     let div = document.createElement("div");
     let trDates = document.createElement("tr");
     let bigDiv = document.createElement("div");
+    let description = document.createElement('span')
+
+    description.textContent = child.description
 
     bigDiv.classList = "bigDiv";
 
@@ -44,6 +47,7 @@ export async function getInfo() {
     }
 
     div.appendChild(h1);
+    div.appendChild(description);
     div.appendChild(trDates);
     div.appendChild(table);
     bigDiv.appendChild(div);
@@ -87,16 +91,6 @@ export async function getInfo() {
         table.appendChild(tr);
       }
     }
-
-    /*     let delBtn = document.createElement('button')
-    let addBtn = document.createElement('button')
-    let modBtn = document.createElement('button')
-
-
-    table.appendChild(modBtn)
-    table.appendChild(addBtn)
-    table.appendChild(delBtn) */
-
     addAttendeeFormToCard(child, div);
   }
 }
