@@ -373,19 +373,41 @@ h1 {
   margin-bottom: 1.5rem;
   font-size: 0.9rem;
 }
-#app .bigDiv .delete-button {
-  background-color: #e76f51;
+#app .bigDiv .event-btn {
   border-radius: 8px;
   border: none;
   width: 20px;
-  height: 20px;
-}
-#app .bigDiv .delete-button::before {
-  content: "x";
   color: white;
+  height: 20px;
+  margin-right: 2px;
+  font-weight: bold;
 }
-#app .bigDiv .delete-button:hover {
+#app .bigDiv .event-btn--delete {
+  background-color: #e76f51;
+}
+#app .bigDiv .event-btn--delete::before {
+  content: "x";
+}
+#app .bigDiv .event-btn--delete:hover {
   background-color: rgb(157, 0, 0);
+}
+#app .bigDiv .event-btn--addDate {
+  background-color: #2a9d8f;
+}
+#app .bigDiv .event-btn--addDate::before {
+  content: "+";
+}
+#app .bigDiv .event-btn--modAttend {
+  background-color: #f4a261;
+}
+#app .bigDiv .event-btn--modAttend::before {
+  content: "a";
+}
+#app .bigDiv .event-btn--modEvent {
+  background-color: #f4a261;
+}
+#app .bigDiv .event-btn--modEvent::before {
+  content: "m";
 }
 #app .bigDiv .dates {
   display: flex;

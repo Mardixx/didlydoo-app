@@ -12,24 +12,26 @@ export async function getInfo() {
     let table = document.createElement("table");
     let div = document.createElement("div");
     let bigDiv = document.createElement("div");
-    let description = document.createElement('span')
+    let description = document.createElement("span");
 
-    description.textContent = child.description
+    description.textContent = child.description;
 
     bigDiv.classList = "bigDiv";
-
 
     h1.textContent = child.name;
 
     let delBtn = document.createElement("button");
     delBtn.setAttribute("data-event-id", child.id);
-    delBtn.classList.add("delete-button");
+    delBtn.classList.add("event-btn", "event-btn--delete");
     delBtn.addEventListener("click", deleteEvent);
     let addDateBtn = document.createElement("button");
     addDateBtn.setAttribute("data-event-id", child.id);
+    addDateBtn.classList.add("event-btn", "event-btn--addDate");
     let modBtn = document.createElement("button");
+    modBtn.classList.add("event-btn", "event-btn--modAttend");
     let eveBtn = document.createElement("button");
     eveBtn.setAttribute("data-event-id", child.id);
+    eveBtn.classList.add("event-btn", "event-btn--modEvent");
     eveBtn.addEventListener("click", modifyEvent);
     addDateBtn.addEventListener("click", addDate);
     bigDiv.appendChild(modBtn);

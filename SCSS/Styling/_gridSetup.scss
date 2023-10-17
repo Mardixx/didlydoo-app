@@ -39,18 +39,40 @@ h1 {
         font-size: 0.9rem;
       }
     }
-    .delete-button {
-      background-color: $orangeRed;
+    .event-btn {
       border-radius: 8px;
       border: none;
       width: 20px;
+      color: white;
       height: 20px;
-      &::before {
-        content: "x";
-        color: white;
+      margin-right: 2px;
+      font-weight: bold;
+      &--delete {
+        background-color: $orangeRed;
+        &::before {
+          content: "x";
+        }
+        &:hover {
+          background-color: rgb(157, 0, 0);
+        }
       }
-      &:hover {
-        background-color: rgb(157, 0, 0);
+      &--addDate {
+        background-color: $green;
+        &::before {
+          content: "+";
+        }
+      }
+      &--modAttend {
+        background-color: $highlight;
+        &::before {
+          content: "a";
+        }
+      }
+      &--modEvent {
+        background-color: $highlight;
+        &::before {
+          content: "m";
+        }
       }
     }
 
