@@ -1,5 +1,46 @@
 [
   {
+    "id": "b2f5c4157309",
+    "name": "Circonsision de Kimi",
+    "author": "Ayoub",
+    "description": "Vraiment besoin d'une description ??",
+    "dates": [
+      "2023-10-11",
+      "2023-10-18"
+    ],
+    "created_at": "2023-10-17T11:30:01.326Z",
+    "num_modification": 0,
+    "last_modification": "2023-10-17T11:30:01.326Z",
+    "attendees": [
+      {
+        "name": "Aaron",
+        "dates": [
+          {
+            "date": "2023-10-11",
+            "available": true
+          },
+          {
+            "date": "2023-10-18",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "Michel",
+        "dates": [
+          {
+            "date": "2023-10-11",
+            "available": false
+          },
+          {
+            "date": "2023-10-18",
+            "available": true
+          }
+        ]
+      }
+    ]
+  },
+  {
     "id": "38b643aeb883",
     "name": "The big sale @ The Mall",
     "description": "I want to buy stuff at the mall, but don't want to go alone who is up?",
@@ -118,6 +159,47 @@
       },
       {
         "name": "kimi",
+        "dates": [
+          {
+            "date": "2022-01-10",
+            "available": true
+          },
+          {
+            "date": "2022-02-10",
+            "available": true
+          },
+          {
+            "date": "2022-03-10",
+            "available": true
+          },
+          {
+            "date": "2022-03-11",
+            "available": true
+          },
+          {
+            "date": "2022-03-12",
+            "available": true
+          },
+          {
+            "date": "2023-06-14",
+            "available": true
+          },
+          {
+            "date": "2023-10-22",
+            "available": true
+          },
+          {
+            "date": "2023-12-28",
+            "available": true
+          },
+          {
+            "date": "2023-12-31",
+            "available": true
+          }
+        ]
+      },
+      {
+        "name": "Jésus",
         "dates": [
           {
             "date": "2022-01-10",

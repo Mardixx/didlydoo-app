@@ -1,8 +1,10 @@
 .nameForm {
   display: flex;
   align-items: center;
-  margin: 2rem 0;
   transition: all 0.3 ease-in-out;
+
+  width: 100%;
+  left: 30%;
   input {
     height: 30px;
     border-radius: 8px;
@@ -10,6 +12,7 @@
   }
   input[type="checkbox"] {
     width: 30px;
+    margin-right: 24px;
     border-radius: 50%;
     outline: none;
     border-radius: 8px;

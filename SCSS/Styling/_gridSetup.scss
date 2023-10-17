@@ -1,97 +1,88 @@
 body {
   background-color: #036855;
+}
 
-    main {
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 2rem;
+}
+
+h1 {
+  font-family: $titleFont;
+  margin-top: 0.5rem;
+  font-size: 1.7rem;
+}
+
+#app {
+  background-color: #f2e1d9;
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+
+  .bigDiv {
+    display: flex;
+    position: relative;
+    margin: 1rem 1rem;
+    width: 100%;
+    justify-content: center;
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .dateRow {
+      display: flex;
+      margin: 1rem 1rem;
+      padding: 0.5rem 0;
+      align-items: center;
+      justify-content: center;
+      gap: 5px;
+      border-bottom: 2px solid black;
+
+      .dates {
         display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-
-        ul {
-            display: none;
-        }
-
-        .project {
-            background-color: #F2E1D9;
-            width: 98%;
-            border-radius: 10px;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: center;
-            flex-direction: row;
-
-            .bigDiv {
-                display: flex;
-                margin: 1rem 0 1rem 0;
-                flex-direction: row;
-                width: 50%;
-                height: 25vh;
-                div {
-                    display: flex;
-                    text-align: center;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: center;
-                    width: 75%;
-                    height: 25vh;
-                }
-                .dateRow {
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    justify-content: center;
-                    gap: 5px;
-    
-                    .dates {
-                        display: flex;
-                        
-                    }
-    
-                }
-                
-                table {
-                    width: 100%;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    flex-direction: row;
-                    gap: 5px;
-                    margin: auto;
-    
-                    tr {
-                        display: flex;
-                        flex-wrap: wrap;
-                        flex-direction: column;
-    
-                    }
-                }
-            }
-
-            .nameDiv {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                justify-content: center;
-                width: 15%;
-                height: 25vh;
-            }
-
-            
-
-            #newDate {
-                display: none;
-            }
-            #eventID {
-                display: none;
-            }
-            #proposerDate {
-                display: none;
-            }
-            
-        }
-
+        width: 50px;
+        font-weight: 600;
+      }
     }
 
+    table {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin: auto;
+
+      tr {
+        display: flex;
+        width: 50px;
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+      td {
+        padding: 2px;
+      }
+      .nameDiv {
+        border: 1px solid red;
+        width: 145px;
+      }
+    }
   }
 
+  #newDate {
+    display: none;
+  }
+  #eventID {
+    display: none;
+  }
+  #proposerDate {
+    display: none;
+  }
+}

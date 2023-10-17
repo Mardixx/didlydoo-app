@@ -218,8 +218,9 @@ body {
 .nameForm {
   display: flex;
   align-items: center;
-  margin: 2rem 0;
   transition: all 0.3 ease-in-out;
+  width: 100%;
+  left: 30%;
 }
 .nameForm input {
   height: 30px;
@@ -228,6 +229,7 @@ body {
 }
 .nameForm input[type=checkbox] {
   width: 30px;
+  margin-right: 24px;
   border-radius: 50%;
   outline: none;
   border-radius: 8px;
@@ -331,79 +333,83 @@ header {
 body {
   background-color: #036855;
 }
-body main {
+
+main {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  margin: 0 2rem;
 }
-body main ul {
-  display: none;
+
+h1 {
+  font-family: "Lily Script One";
+  margin-top: 0.5rem;
+  font-size: 1.7rem;
 }
-body main .project {
+
+#app {
   background-color: #f2e1d9;
-  width: 98%;
+  width: 100%;
   border-radius: 10px;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
+}
+#app .bigDiv {
+  display: flex;
+  position: relative;
+  margin: 1rem 1rem;
+  width: 100%;
   justify-content: center;
-  flex-direction: row;
 }
-body main .project .bigDiv {
+#app .bigDiv div {
   display: flex;
-  margin: 1rem 0 1rem 0;
-  flex-direction: row;
-  width: 50%;
-  height: 25vh;
-}
-body main .project .bigDiv div {
-  display: flex;
-  text-align: center;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 75%;
-  height: 25vh;
 }
-body main .project .bigDiv .dateRow {
+#app .bigDiv .dateRow {
   display: flex;
-  flex-direction: row;
+  margin: 1rem 1rem;
+  padding: 0.5rem 0;
   align-items: center;
   justify-content: center;
   gap: 5px;
+  border-bottom: 2px solid black;
 }
-body main .project .bigDiv .dateRow .dates {
+#app .bigDiv .dateRow .dates {
   display: flex;
+  width: 50px;
+  font-weight: 600;
 }
-body main .project .bigDiv table {
+#app .bigDiv table {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: row;
   gap: 5px;
   margin: auto;
 }
-body main .project .bigDiv table tr {
+#app .bigDiv table tr {
   display: flex;
+  width: 50px;
   flex-wrap: wrap;
   flex-direction: column;
 }
-body main .project .nameDiv {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 15%;
-  height: 25vh;
+#app .bigDiv table td {
+  padding: 2px;
 }
-body main .project #newDate {
+#app .bigDiv table .nameDiv {
+  border: 1px solid red;
+  width: 145px;
+}
+#app #newDate {
   display: none;
 }
-body main .project #eventID {
+#app #eventID {
   display: none;
 }
-body main .project #proposerDate {
+#app #proposerDate {
   display: none;
 }/*# sourceMappingURL=style.css.map */

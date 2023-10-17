@@ -4,7 +4,7 @@ import { deleteEvent } from "./_deleteEvent.js";
 export async function getInfo() {
   let data = await fetch("http://localhost:3000/api/events");
   let response = await data.json();
-  let section = document.querySelector(".project");
+  let section = document.getElementById("app");
   for (let child of response) {
     let h1 = document.createElement("h1");
     let table = document.createElement("table");
@@ -20,6 +20,7 @@ export async function getInfo() {
 
     let delBtn = document.createElement("button");
     delBtn.setAttribute("data-event-id", child.id);
+    delBtn.classList.add("delete-button");
     delBtn.addEventListener("click", deleteEvent);
     let addBtn = document.createElement("button");
     let modBtn = document.createElement("button");
@@ -38,7 +39,7 @@ export async function getInfo() {
       td.textContent = attendees.name;
 
       divNames.appendChild(td);
-      bigDiv.appendChild(divNames);
+      table.appendChild(divNames);
       console.log(attendees);
     }
 
@@ -62,7 +63,7 @@ export async function getInfo() {
         let td = document.createElement("td");
 
         if (names.available === null) {
-          td.textContent = "Don't know";
+          td.textContent = "?";
         } else {
           td.textContent = names.available;
         }
