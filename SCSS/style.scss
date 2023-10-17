@@ -7,3 +7,7 @@
 @import "./Styling/header";
 @import "./Styling/eventGrid";
 @import "./Components/modalForm";
+
+.blur {
+  filter: blur(1rem);
+}

@@ -3,6 +3,9 @@ import { deleteEvent } from "./_deleteEvent.js";
 import { modifyEvent } from "./modifyEvent.js";
 import { addDate } from "./_buttonNewdate.js";
 
+
+
+
 export async function getInfo() {
   let data = await fetch("http://localhost:3000/api/events");
   let response = await data.json();
@@ -102,3 +105,10 @@ export async function getInfo() {
     addAttendeeFormToCard(child, div);
   }
 }
+
+fetch("http://localhost:3000/api/attendees/")
+  .then((response) => response.json())
+  .then((datas) => {
+    console.log(datas);
+  });
+  

@@ -1,6 +1,9 @@
 export async function modifyEvent(event) {
   const eventID = event.target.getAttribute("data-event-id");
-
+  const elementsToBlur = document.querySelectorAll("body > *:not(form)");
+  elementsToBlur.forEach(element => {
+    element.classList.add("blur");
+  });
   // fetch event data
   fetch(`http://localhost:3000/api/events/${eventID}`)
     .then((response) => response.json())
@@ -42,12 +45,21 @@ function createForm(data, eventID) {
       description: descriptionInput.value,
     };
     submitForm(formData, eventID, form);
+    removeBlur();
   });
 
   // handle cancel button click
   const cancelButton = document.getElementById("cancel-button");
   cancelButton.addEventListener("click", () => {
+    removeBlur();
     form.remove();
+  });
+}
+function removeBlur() {
+  // remove blur effect from all elements
+  const elementsToBlur = document.querySelectorAll("body > *:not(form)");
+  elementsToBlur.forEach(element => {
+    element.classList.remove("blur");
   });
 }
 
