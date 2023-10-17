@@ -155,7 +155,7 @@ body {
   transform: translateX(15vw) translateY(-2vw);
 }
 
-.btnNewDate {
+/* .btnNewDate {
   padding: 15px;
   font-size: 16px;
   border-radius: 20px;
@@ -166,13 +166,12 @@ body {
   color: #000000;
   font-weight: 600;
   box-shadow: 5px 2px 20px black;
+  &:hover {
+    background-color: #000000;
+    color: #ffffff;
+    box-shadow: none;
+  }
 }
-.btnNewDate:hover {
-  background-color: #000000;
-  color: #ffffff;
-  box-shadow: none;
-}
-
 .btnAdd {
   padding: 15px;
   font-size: 16px;
@@ -184,13 +183,12 @@ body {
   color: #ffffff;
   font-weight: 600;
   box-shadow: 5px 2px 20px black;
-}
-.btnAdd:hover {
-  background-color: #ffffff;
-  color: #f4a261;
-  box-shadow: none;
-}
-
+  &:hover {
+    background-color: #ffffff;
+    color: $highlight;
+    box-shadow: none;
+  }
+} */
 #dateNew-button {
   cursor: pointer;
   background-color: #f4a261;
@@ -356,7 +354,6 @@ h1 {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
 }
 #app .bigDiv {
   display: flex;
@@ -371,15 +368,23 @@ h1 {
   align-items: center;
   justify-content: center;
 }
-#app .bigDiv div h1 {
-  margin: 2rem 0;
+#app .bigDiv div span {
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
 }
 #app .bigDiv .delete-button {
-  background-color: red;
+  background-color: #e76f51;
   border-radius: 8px;
   border: none;
   width: 20px;
   height: 20px;
+}
+#app .bigDiv .delete-button::before {
+  content: "x";
+  color: white;
+}
+#app .bigDiv .delete-button:hover {
+  background-color: rgb(157, 0, 0);
 }
 #app .bigDiv .dates {
   display: flex;
@@ -402,7 +407,7 @@ h1 {
 #app .bigDiv table .nameDiv {
   width: 145px;
   margin-left: 1rem;
-  margin-top: 36px;
+  margin-top: 40px;
   font-weight: 600;
   text-transform: capitalize;
 }
