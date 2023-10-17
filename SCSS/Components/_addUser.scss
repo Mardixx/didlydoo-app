@@ -1,18 +1,21 @@
 .nameForm {
   display: flex;
-  align-items: center;
   transition: all 0.3 ease-in-out;
+  align-items: center;
+  flex-wrap: wrap;
   margin-left: 2rem;
   width: 100%;
-  left: 30%;
   input {
     height: 30px;
     border-radius: 8px;
     border: none;
+    &:focus {
+      outline-color: $highlight;
+    }
   }
   input[type="checkbox"] {
     width: 30px;
-    margin-right: 24px;
+    margin-right: 26px;
     border-radius: 50%;
     outline: none;
     border-radius: 8px;
@@ -25,9 +28,9 @@
     font-weight: 600;
     height: 30px;
     width: 50px;
+    margin-left: -12px;
     background-color: $highlight;
     color: white;
-    margin-left: 6px;
     transition: transform 180ms ease-in-out;
     display: block;
     &:hover {

@@ -9,6 +9,12 @@ body {
   margin: 2vw 0;
   font-size: calc(64px + 16 * ((100vw - 568px) / (768 - 568)));
   color: white;
+  text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
+}
+
+h2 {
+  font-family: $titleFont;
+  font-size: 2rem;
 }
 
 .main-subtitle {
