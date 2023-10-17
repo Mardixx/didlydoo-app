@@ -216,11 +216,11 @@ body {
 
 .nameForm {
   display: flex;
-  align-items: center;
   transition: all 0.3 ease-in-out;
-  margin-left: 2rem;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: 1rem;
   width: 100%;
-  left: 30%;
 }
 .nameForm input {
   height: 30px;
@@ -242,9 +242,9 @@ body {
   font-weight: 600;
   height: 30px;
   width: 50px;
+  margin-left: -12px;
   background-color: #f4a261;
   color: white;
-  margin-left: 6px;
   transition: transform 180ms ease-in-out;
   display: block;
 }
@@ -344,7 +344,6 @@ main {
 
 h1 {
   font-family: "Lily Script One";
-  margin-top: 0.5rem;
   font-size: 1.7rem;
 }
 
@@ -352,22 +351,22 @@ h1 {
   background-color: #f2e1d9;
   width: 100%;
   border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
 }
 #app .bigDiv {
   display: flex;
-  position: relative;
-  margin: 1rem 1rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
   width: 100%;
-  justify-content: center;
 }
 #app .bigDiv div {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  flex-wrap: wrap;
+}
+#app .bigDiv div .actionBar {
+  float: left;
+  margin-bottom: 0.5rem;
 }
 #app .bigDiv div span {
   margin-bottom: 1.5rem;
@@ -417,6 +416,7 @@ h1 {
 #app .bigDiv table {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 5px;
   margin: auto;
