@@ -27,6 +27,7 @@ export async function getInfo() {
     let addDateBtn = document.createElement("button");
     addDateBtn.setAttribute("data-event-id", child.id);
     addDateBtn.classList.add("event-btn", "event-btn--addDate");
+    addDateBtn.addEventListener("click", addDate);
     let modBtn = document.createElement("button");
     modBtn.classList.add("event-btn", "event-btn--modAttend");
     let eveBtn = document.createElement("button");
