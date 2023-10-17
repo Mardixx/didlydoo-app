@@ -2,6 +2,7 @@ import { addAttendeeFormToCard } from "./_addUser.js";
 import { deleteEvent } from "./_deleteEvent.js";
 import { modifyEvent } from "./modifyEvent.js";
 import { addDate } from "./_buttonNewdate.js";
+import { modifyAttendee } from "./modifyAttendee.js";
 
 
 
@@ -32,7 +33,9 @@ export async function getInfo() {
     addDateBtn.classList.add("event-btn", "event-btn--addDate");
     addDateBtn.addEventListener("click", addDate);
     let modBtn = document.createElement("button");
+    modBtn.setAttribute("data-event-id", child.id);
     modBtn.classList.add("event-btn", "event-btn--modAttend");
+    modBtn.addEventListener("click", modifyAttendee);
     let eveBtn = document.createElement("button");
     eveBtn.setAttribute("data-event-id", child.id);
     eveBtn.classList.add("event-btn", "event-btn--modEvent");
