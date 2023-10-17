@@ -23,9 +23,9 @@ export async function getInfo() {
     delBtn.addEventListener("click", deleteEvent);
     let addBtn = document.createElement("button");
     let modBtn = document.createElement("button");
-    table.appendChild(modBtn);
-    table.appendChild(addBtn);
-    table.appendChild(delBtn);
+    bigDiv.appendChild(modBtn);
+    bigDiv.appendChild(addBtn);
+    bigDiv.appendChild(delBtn);
 
     let divNames = document.createElement("tr");
 
