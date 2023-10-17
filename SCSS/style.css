@@ -423,4 +423,49 @@ main {
     width: 100%;
     margin: 0;
   }
+}
+body {
+  position: relative;
+}
+body .modalForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 70%;
+  color: white;
+  height: 70%;
+  background-color: #036855;
+  border: 2px solid white;
+  border-radius: 12px;
+  transform: translate(-50%, -50%);
+}
+body .modalForm input[type=text] {
+  margin-bottom: 2rem;
+  padding: 8px;
+  border-radius: 8px;
+  border: none;
+}
+body .modalForm label {
+  font-family: "Lily Script One";
+  font-size: 1.5rem;
+}
+body .modalForm .actions {
+  margin-top: 1em;
+}
+body .modalForm .actions button {
+  text-align: center;
+  border-radius: 8px;
+  border: none;
+  margin-right: 1rem;
+  background-color: #f4a261;
+  font-weight: bold;
+  color: white;
+  padding: 6px;
+}
+body .modalForm .actions button:hover {
+  background: #e76f51;
 }/*# sourceMappingURL=style.css.map */
