@@ -227,7 +227,7 @@ body {
   border-radius: 8px;
   border: none;
 }
-.nameForm input[type="checkbox"] {
+.nameForm input[type=checkbox] {
   width: 30px;
   margin-right: 24px;
   border-radius: 50%;
@@ -412,4 +412,4 @@ h1 {
 }
 #app #proposerDate {
   display: none;
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

@@ -76,7 +76,10 @@ export async function getInfo() {
 
             break;
           case null:
-            td.textContent = "?";
+            img.src = "./img/xMark.svg";
+            img.alt = "imgCheckmark";
+            td.appendChild(img);
+            img.style.width = "20px";
             break;
         }
 
