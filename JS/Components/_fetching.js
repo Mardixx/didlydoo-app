@@ -9,7 +9,6 @@ export async function getInfo() {
     let h1 = document.createElement("h1");
     let table = document.createElement("table");
     let div = document.createElement("div");
-    let trDates = document.createElement("tr");
     let bigDiv = document.createElement("div");
     let description = document.createElement('span')
 
@@ -17,7 +16,6 @@ export async function getInfo() {
 
     bigDiv.classList = "bigDiv";
 
-    trDates.classList = "dateRow";
 
     h1.textContent = child.name;
 
@@ -48,7 +46,6 @@ export async function getInfo() {
 
     div.appendChild(h1);
     div.appendChild(description);
-    div.appendChild(trDates);
     div.appendChild(table);
     bigDiv.appendChild(div);
     section.appendChild(bigDiv);
