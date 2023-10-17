@@ -147,6 +147,7 @@ body {
   margin: 2vw 0;
   font-size: calc(64px + 16 * (100vw - 568px) / 200);
   color: white;
+  text-shadow: 2px 3px 5px rgba(0, 0, 0, 0.5);
 }
 
 .main-subtitle {
