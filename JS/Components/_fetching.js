@@ -66,13 +66,13 @@ export async function getInfo() {
             img.src = "./img/Checkmark.svg";
             img.alt = "imgCheckmark";
             td.appendChild(img);
-            img.style.width = "40px";
+            img.style.width = "20px";
             break;
           case false:
             img.src = "./img/xMark.svg";
             img.alt = "imgCheckmark";
             td.appendChild(img);
-            img.style.width = "40px";
+            img.style.width = "20px";
 
             break;
           case null:
