@@ -1,18 +1,5 @@
 [
   {
-    "id": "1609cef302bd",
-    "name": "dzqdzd",
-    "author": "dqzd",
-    "description": "zqdzdzqdzd",
-    "dates": [
-      "2023-10-26"
-    ],
-    "created_at": "2023-10-16T13:08:42.471Z",
-    "num_modification": 0,
-    "last_modification": "2023-10-16T13:08:42.471Z",
-    "attendees": []
-  },
-  {
     "id": "f5b6564b5dc4",
     "name": "My sweet 16",
     "description": "I am going to be 16, let us all party together! Help me pick a date so we can go together",
@@ -87,6 +74,39 @@
           {
             "date": "2023-12-25",
             "available": false
+          }
+        ]
+      },
+      {
+        "name": "kimi",
+        "dates": [
+          {
+            "date": "2022-03-17",
+            "available": true
+          },
+          {
+            "date": "2022-03-18",
+            "available": true
+          },
+          {
+            "date": "2022-03-21",
+            "available": true
+          },
+          {
+            "date": "2022-03-22",
+            "available": true
+          },
+          {
+            "date": "2023-10-15",
+            "available": true
+          },
+          {
+            "date": "2023-10-25",
+            "available": true
+          },
+          {
+            "date": "2023-12-25",
+            "available": true
           }
         ]
       }
@@ -168,6 +188,88 @@
           {
             "date": "2022-03-12",
             "available": true
+          }
+        ]
+      },
+      {
+        "name": "Kimi",
+        "dates": [
+          {
+            "date": "2022-01-10",
+            "available": false
+          },
+          {
+            "date": "2022-02-10",
+            "available": true
+          },
+          {
+            "date": "2022-03-10",
+            "available": false
+          },
+          {
+            "date": "2022-03-11",
+            "available": false
+          },
+          {
+            "date": "2022-03-12",
+            "available": true
+          },
+          {
+            "date": "2023-06-14",
+            "available": false
+          },
+          {
+            "date": "2023-10-22",
+            "available": false
+          },
+          {
+            "date": "2023-12-28",
+            "available": false
+          },
+          {
+            "date": "2023-12-31",
+            "available": false
+          }
+        ]
+      },
+      {
+        "name": "kimi",
+        "dates": [
+          {
+            "date": "2022-01-10",
+            "available": false
+          },
+          {
+            "date": "2022-02-10",
+            "available": false
+          },
+          {
+            "date": "2022-03-10",
+            "available": false
+          },
+          {
+            "date": "2022-03-11",
+            "available": true
+          },
+          {
+            "date": "2022-03-12",
+            "available": true
+          },
+          {
+            "date": "2023-06-14",
+            "available": false
+          },
+          {
+            "date": "2023-10-22",
+            "available": false
+          },
+          {
+            "date": "2023-12-28",
+            "available": false
+          },
+          {
+            "date": "2023-12-31",
+            "available": false
           }
         ]
       }
