@@ -61,10 +61,24 @@ export async function getInfo() {
       for (let names of dates.attendees) {
         let td = document.createElement("td");
 
-        if (names.available === null) {
-          td.textContent = "Don't know";
-        } else {
-          td.textContent = names.available;
+        let img = document.createElement('img')
+        switch (names.available) {
+          case true:
+            img.src = './img/Checkmark.svg'
+            img.alt = 'imgCheckmark'
+            td.appendChild(img)
+            img.style.width = '40px'
+            break;
+          case false:
+            img.src = './img/xMark.svg'
+            img.alt = 'imgCheckmark'
+            td.appendChild(img)
+            img.style.width = '40px'
+            
+            break;
+          case null:
+            td.textContent = '?'
+            break;
         }
         tr.appendChild(td);
         table.appendChild(tr);

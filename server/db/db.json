@@ -1,165 +1,95 @@
 [
   {
-    "id": "38b643aeb883",
-    "name": "The big sale @ The Mall",
-    "description": "I want to buy stuff at the mall, but don't want to go alone who is up?",
-    "author": "Jean D'eau",
+    "id": "0c7b9f92be16",
+    "name": "Barmitsva",
+    "author": "Kimi",
+    "description": "Zdqzdzdss",
     "dates": [
-      "2022-01-10",
-      "2022-02-10",
-      "2022-03-10",
-      "2022-03-11",
-      "2022-03-12",
-      "2023-12-28",
-      "2023-12-31",
-      "2023-06-14",
-      "2023-10-22"
+      "2023-11-15"
     ],
+    "created_at": "2023-10-17T09:29:08.912Z",
+    "num_modification": 0,
+    "last_modification": "2023-10-17T09:29:08.912Z",
+    "attendees": []
+  },
+  {
+    "id": "a02baa0b6ea1",
+    "name": "Barmitsva",
+    "author": "Kimi",
+    "description": "Zdqzdzdss",
+    "dates": [
+      "2023-11-15"
+    ],
+    "created_at": "2023-10-17T09:29:06.395Z",
+    "num_modification": 0,
+    "last_modification": "2023-10-17T09:29:06.395Z",
+    "attendees": []
+  },
+  {
+    "id": "c80ea119220a",
+    "name": "Barmitsva",
+    "author": "Kimi",
+    "description": "Zdqzdzdss",
+    "dates": [
+      "2023-11-15"
+    ],
+    "created_at": "2023-10-17T09:29:03.049Z",
+    "num_modification": 0,
+    "last_modification": "2023-10-17T09:29:03.049Z",
+    "attendees": []
+  },
+  {
+    "id": "e1580bd51cd8",
+    "name": "Barmitsva",
+    "author": "Kimi",
+    "description": "Zdqzdzdss",
+    "dates": [
+      "2023-10-26",
+      "2023-11-02"
+    ],
+    "created_at": "2023-10-17T08:57:21.192Z",
+    "num_modification": 0,
+    "last_modification": "2023-10-17T08:57:21.192Z",
     "attendees": [
-      {
-        "name": "Michou",
-        "dates": [
-          {
-            "date": "2022-01-10",
-            "available": true
-          }
-        ]
-      },
-      {
-        "name": "Jane Doe",
-        "dates": [
-          {
-            "date": "2022-01-10",
-            "available": true
-          },
-          {
-            "date": "2022-02-10",
-            "available": true
-          },
-          {
-            "date": "2022-03-10",
-            "available": true
-          },
-          {
-            "date": "2022-03-11",
-            "available": true
-          },
-          {
-            "date": "2022-03-12",
-            "available": false
-          }
-        ]
-      },
-      {
-        "name": "Alberto ",
-        "dates": [
-          {
-            "date": "2022-01-10",
-            "available": false
-          },
-          {
-            "date": "2022-02-10",
-            "available": true
-          },
-          {
-            "date": "2022-03-10",
-            "available": true
-          },
-          {
-            "date": "2022-03-11",
-            "available": true
-          },
-          {
-            "date": "2022-03-12",
-            "available": true
-          }
-        ]
-      },
-      {
-        "name": "Roberto",
-        "dates": [
-          {
-            "date": "2022-01-10",
-            "available": true
-          },
-          {
-            "date": "2022-02-10",
-            "available": false
-          },
-          {
-            "date": "2022-03-10",
-            "available": true
-          },
-          {
-            "date": "2022-03-11",
-            "available": true
-          },
-          {
-            "date": "2022-03-12",
-            "available": false
-          },
-          {
-            "date": "2023-06-14",
-            "available": false
-          },
-          {
-            "date": "2023-10-22",
-            "available": false
-          },
-          {
-            "date": "2023-12-28",
-            "available": false
-          },
-          {
-            "date": "2023-12-31",
-            "available": false
-          }
-        ]
-      },
       {
         "name": "kimi",
         "dates": [
           {
-            "date": "2022-01-10",
+            "date": "2023-10-26",
             "available": true
           },
           {
-            "date": "2022-02-10",
-            "available": true
+            "date": "2023-11-02",
+            "available": false
+          }
+        ]
+      },
+      {
+        "name": "Antoine",
+        "dates": [
+          {
+            "date": "2023-10-26",
+            "available": false
           },
           {
-            "date": "2022-03-10",
-            "available": true
-          },
-          {
-            "date": "2022-03-11",
-            "available": true
-          },
-          {
-            "date": "2022-03-12",
-            "available": true
-          },
-          {
-            "date": "2023-06-14",
-            "available": true
-          },
-          {
-            "date": "2023-10-22",
-            "available": true
-          },
-          {
-            "date": "2023-12-28",
-            "available": true
-          },
-          {
-            "date": "2023-12-31",
+            "date": "2023-11-02",
             "available": true
           }
         ]
+      },
+      {
+        "name": "stephane",
+        "dates": [
+          {
+            "date": "2023-10-26",
+            "available": false
+          },
+          {
+            "date": "2023-11-02",
+            "available": false
+          }
+        ]
       }
-    ],
-    "created_at": "2021-11-13T14:00",
-    "num_modification": 0,
-    "last_modification": "2021-11-13T14:00"
+    ]
   }
 ]
