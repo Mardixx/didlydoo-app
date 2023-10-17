@@ -283,6 +283,17 @@ body {
   height: 20px;
   margin-bottom: -19px;
 }
+@media (max-width: 768px) {
+  .inputs-new input,
+  .inputs-new textarea {
+    width: 80%;
+    margin: 5px 1rem;
+  }
+  .inputs-new #add-button,
+  .inputs-new #dateNew-button {
+    width: 85%;
+  }
+}
 
 header {
   display: flex;
