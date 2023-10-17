@@ -49,15 +49,13 @@ dateDeleteButton.addEventListener('click', (event) => {
 
 
 
-console.log(datesArray);
+  console.log(datesArray);
 
-
-
-const nameInput = document.getElementById('name');
-const authorInput = document.getElementById('author');
-const descriptionInput = document.getElementById('description');
-const addButton = document.getElementById('add-button');
-const errorMessage = document.getElementById('error-message');
+  const nameInput = document.getElementById("name");
+  const authorInput = document.getElementById("author");
+  const descriptionInput = document.getElementById("description");
+  const addButton = document.getElementById("add-button");
+  const errorMessage = document.getElementById("error-message");
 
 addButton.addEventListener('click', (event) => {
 event.preventDefault();
@@ -79,20 +77,17 @@ const eventData = {
     description: descriptionInput.value
 };
 
-
-fetch('http://localhost:3000/api/events/', {
-    method: 'POST',
-    body: JSON.stringify(eventData),
-    headers: {
-        'Content-Type': 'application/json'
+      fetch("http://localhost:3000/api/events/", {
+        method: "POST",
+        body: JSON.stringify(eventData),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+        .then((response) => response.json())
+        .then((data) => console.log(data))
+        .catch((error) => console.error(error));
+      console.log(eventData);
     }
-})
-.then(response => response.json())
-.then(data => console.log(data))
-.catch(error => console.error(error));
-console.log(eventData);
-   }
-});
+  });
 }
-
-

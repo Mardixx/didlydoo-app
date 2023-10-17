@@ -1,0 +1,62 @@
+.inputs-new {
+  width: 100%;
+  text-align: center;
+  margin: 1rem 0;
+  input {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-family: $mainFont;
+    &:focus {
+      outline-color: $highlight;
+    }
+  }
+  #error-message {
+    color: $highlight;
+  }
+  textarea {
+    padding: 12px;
+    border-radius: 8px;
+    resize: none;
+    height: 20px;
+    margin-bottom: -19px;
+  }
+  @media (max-width: 768px) {
+    input,
+    textarea {
+      width: 80%;
+      margin: 5px 1rem;
+    }
+    #add-button,
+    #dateNew-button {
+      width: 85%;
+    }
+  }
+}
+
+#dates-list {
+  margin: 1rem 0;
+  li {
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button {
+      font-size: 1rem;
+      text-transform: uppercase;
+      vertical-align: auto;
+      font-weight: bold;
+      color: $orangeRed;
+      border: none;
+      border-radius: 8px;
+      background: none;
+      transition: all 0.3s linear;
+      &:hover {
+        transform: rotate(180deg);
+        margin-left: 4px;
+        color: red;
+      }
+    }
+  }
+}
