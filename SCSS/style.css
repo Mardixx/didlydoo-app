@@ -179,7 +179,7 @@ body {
   border-radius: 20px;
   border: none;
   cursor: pointer;
-  background: #F4A261;
+  background: #f4a261;
   width: 170px;
   color: #ffffff;
   font-weight: 600;
@@ -187,8 +187,32 @@ body {
 }
 .btnAdd:hover {
   background-color: #ffffff;
-  color: #F4A261;
+  color: #f4a261;
   box-shadow: none;
+}
+
+#dateNew-button {
+  cursor: pointer;
+  background-color: #f4a261;
+  font-weight: bold;
+  color: white;
+}
+#dateNew-button:hover {
+  background-color: #e76f51;
+  color: white;
+}
+
+#add-button {
+  cursor: pointer;
+  background-color: #e76f51;
+  color: white;
+  font-weight: bold;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+}
+#add-button:hover {
+  background-color: green;
+  transform: scale(103%);
 }
 
 .nameForm {
@@ -233,6 +257,31 @@ body {
   font-size: 0.6em;
   clear: both;
   display: block;
+}
+
+.inputs-new {
+  width: 100%;
+  text-align: center;
+  margin: 1rem 0;
+}
+.inputs-new input {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-family: "Poppins";
+}
+.inputs-new input:focus {
+  outline-color: #f4a261;
+}
+.inputs-new #error-message {
+  color: #f4a261;
+}
+.inputs-new textarea {
+  padding: 12px;
+  border-radius: 8px;
+  resize: none;
+  height: 20px;
+  margin-bottom: -19px;
 }
 
 header {

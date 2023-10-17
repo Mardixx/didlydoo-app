@@ -1,0 +1,24 @@
+.inputs-new {
+  width: 100%;
+  text-align: center;
+  margin: 1rem 0;
+  input {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-family: $mainFont;
+    &:focus {
+      outline-color: $highlight;
+    }
+  }
+  #error-message {
+    color: $highlight;
+  }
+  textarea {
+    padding: 12px;
+    border-radius: 8px;
+    resize: none;
+    height: 20px;
+    margin-bottom: -19px;
+  }
+}

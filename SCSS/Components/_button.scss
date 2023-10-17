@@ -1,36 +1,58 @@
 .btnNewDate {
-    padding: 15px;
-    font-size: 16px;
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
-    background: #ffffff;
-    width: 170px;
-    color: #000000;
-    font-weight: 600;
-    box-shadow: 5px 2px 20px black;
-    // font-family: 'Lily Script One';
-    &:hover {
-        background-color: #000000;
-        color: #ffffff;
-        box-shadow: none;
-    }
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: #ffffff;
+  width: 170px;
+  color: #000000;
+  font-weight: 600;
+  box-shadow: 5px 2px 20px black;
+  &:hover {
+    background-color: #000000;
+    color: #ffffff;
+    box-shadow: none;
+  }
 }
 .btnAdd {
-    padding: 15px;
-    font-size: 16px;
-    border-radius: 20px;
-    border: none;
-    cursor: pointer;
-    background: #F4A261;
-    width: 170px;
-    color: #ffffff;
-    font-weight: 600;
-    // font-family: 'Poppins';
-    box-shadow: 5px 2px 20px black;
-    &:hover {
-        background-color: #ffffff;
-        color: #F4A261;
-        box-shadow: none;
-    }
+  padding: 15px;
+  font-size: 16px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: #f4a261;
+  width: 170px;
+  color: #ffffff;
+  font-weight: 600;
+  box-shadow: 5px 2px 20px black;
+  &:hover {
+    background-color: #ffffff;
+    color: $highlight;
+    box-shadow: none;
+  }
+}
+
+#dateNew-button {
+  cursor: pointer;
+  background-color: $highlight;
+  font-weight: bold;
+  color: white;
+  &:hover {
+    background-color: $orangeRed;
+    color: white;
+  }
+}
+
+#add-button {
+  cursor: pointer;
+  background-color: $orangeRed;
+  color: white;
+  font-weight: bold;
+  text-transform: capitalize;
+  transition: all 0.2s linear;
+  &:hover {
+    background-color: green;
+    transform: scale(103%);
+  }
 }
