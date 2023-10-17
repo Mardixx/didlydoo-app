@@ -5,6 +5,8 @@ export async function addEvents() {
 // the array is then displayed in the dom as a list
 // the array is then sent to the database as a string
 const dateInput = document.getElementById('date');
+// the date input is set to the current date minimum
+dateInput.setAttribute('min', new Date().toISOString().split('T')[0]);
 const dateNewButton = document.getElementById('dateNew-button');
 let datesArray = [];
 
@@ -12,6 +14,10 @@ dateNewButton.addEventListener('click', (event) => {
 event.preventDefault();
 const newDate = dateInput.value;
 const dateString= newDate.toString();
+if (newDate === '') {
+    errorMessage.textContent = 'please submit a date';
+  } else {
+errorMessage.textContent = '';    
 datesArray.push(dateString);
 const datesList = document.getElementById('dates-list');
 const dateItem = document.createElement('li');
@@ -34,7 +40,10 @@ dateDeleteButton.addEventListener('click', (event) => {
     }
     console.log(datesArray);
 });
+  }    
 });
+
+
 
 
 
@@ -54,7 +63,7 @@ addButton.addEventListener('click', (event) => {
 event.preventDefault();
 if (authorInput.value === '') {
     errorMessage.textContent = 'Please enter an author.';
-  } else if (datesArray === '') {
+  } else if (datesArray.length === 0 ) {
     errorMessage.textContent = 'Please choose a date.';
  }  else if (datesArray.length > 2){
     errorMessage.textContent = 'Please choose only two date.';
