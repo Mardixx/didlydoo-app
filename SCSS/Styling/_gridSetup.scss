@@ -36,21 +36,22 @@ h1 {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-    }
-    .dateRow {
-      display: flex;
-      margin: 1rem 1rem;
-      padding: 0.5rem 0;
-      align-items: center;
-      justify-content: center;
-      gap: 5px;
-      border-bottom: 2px solid black;
-
-      .dates {
-        display: flex;
-        width: 50px;
-        font-weight: 600;
+      h1 {
+        margin: 2rem 0;
       }
+    }
+    .delete-button {
+      background-color: red;
+      border-radius: 8px;
+      border: none;
+      width: 20px;
+      height: 20px;
+    }
+
+    .dates {
+      display: flex;
+      width: 50px;
+      font-weight: 600;
     }
 
     table {
@@ -62,16 +63,19 @@ h1 {
 
       tr {
         display: flex;
-        width: 50px;
+        width: 55px;
         flex-wrap: wrap;
         flex-direction: column;
       }
-      td {
-        padding: 2px;
-      }
       .nameDiv {
-        border: 1px solid red;
         width: 145px;
+        margin-left: 1rem;
+        margin-top: 36px;
+        font-weight: 600;
+        text-transform: capitalize;
+        .names {
+          margin-bottom: 10px;
+        }
       }
     }
   }
