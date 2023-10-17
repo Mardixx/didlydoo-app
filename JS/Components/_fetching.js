@@ -1,5 +1,7 @@
 import { addAttendeeFormToCard } from "./_addUser.js";
 import { deleteEvent } from "./_deleteEvent.js";
+import { modifyEvent } from "./modifyEvent.js";
+import { addDate } from "./_buttonNewdate.js";
 
 export async function getInfo() {
   let data = await fetch("http://localhost:3000/api/events");
@@ -23,11 +25,17 @@ export async function getInfo() {
     delBtn.setAttribute("data-event-id", child.id);
     delBtn.classList.add("delete-button");
     delBtn.addEventListener("click", deleteEvent);
-    let addBtn = document.createElement("button");
+    let addDateBtn = document.createElement("button");
+    addDateBtn.setAttribute("data-event-id", child.id);
     let modBtn = document.createElement("button");
+    let eveBtn = document.createElement("button");
+    eveBtn.setAttribute("data-event-id", child.id);
+    eveBtn.addEventListener("click", modifyEvent);
+    addDateBtn.addEventListener("click", addDate);
     bigDiv.appendChild(modBtn);
-    bigDiv.appendChild(addBtn);
+    bigDiv.appendChild(addDateBtn);
     bigDiv.appendChild(delBtn);
+    bigDiv.appendChild(eveBtn);
 
     let divNames = document.createElement("tr");
 
