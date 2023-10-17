@@ -219,6 +219,7 @@ body {
   display: flex;
   align-items: center;
   transition: all 0.3 ease-in-out;
+  margin-left: 2rem;
   width: 100%;
   left: 30%;
 }
@@ -370,16 +371,17 @@ h1 {
   align-items: center;
   justify-content: center;
 }
-#app .bigDiv .dateRow {
-  display: flex;
-  margin: 1rem 1rem;
-  padding: 0.5rem 0;
-  align-items: center;
-  justify-content: center;
-  gap: 5px;
-  border-bottom: 2px solid black;
+#app .bigDiv div h1 {
+  margin: 2rem 0;
 }
-#app .bigDiv .dateRow .dates {
+#app .bigDiv .delete-button {
+  background-color: red;
+  border-radius: 8px;
+  border: none;
+  width: 20px;
+  height: 20px;
+}
+#app .bigDiv .dates {
   display: flex;
   width: 50px;
   font-weight: 600;
@@ -393,16 +395,19 @@ h1 {
 }
 #app .bigDiv table tr {
   display: flex;
-  width: 50px;
+  width: 55px;
   flex-wrap: wrap;
   flex-direction: column;
 }
-#app .bigDiv table td {
-  padding: 2px;
-}
 #app .bigDiv table .nameDiv {
-  border: 1px solid red;
   width: 145px;
+  margin-left: 1rem;
+  margin-top: 36px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+#app .bigDiv table .nameDiv .names {
+  margin-bottom: 10px;
 }
 #app #newDate {
   display: none;
