@@ -468,4 +468,8 @@ body .modalForm .actions button {
 }
 body .modalForm .actions button:hover {
   background: #e76f51;
+}
+
+.blur {
+  filter: blur(1rem);
 }/*# sourceMappingURL=style.css.map */

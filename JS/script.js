@@ -4,3 +4,4 @@ getInfo();
 
 import { addEvents } from "../JS/Components/addEvents.js";
 addEvents();
+
